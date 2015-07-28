@@ -1,7 +1,9 @@
 #!/usr/bin/env ash
 set -ex
 cd /tmp
-apk -U add git wget openssl libstdc++ g++ gcc libgcc
+#export PATH=$PATH:/usr/bin
+opkg-install git bash wget libc libgcc ca-certificates
+find / -name git
 wget "https://get.docker.com/builds/Linux/x86_64/docker-latest" -O /usr/local/bin/docker
 chmod 755 /usr/local/bin/docker
 wget "http://download.robovm.org/robovm-1.4.0.tar.gz"
