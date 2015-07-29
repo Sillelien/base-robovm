@@ -7,8 +7,6 @@ RUN tar xvfz robovm-1.4.0.tar.gz && mv robovm-1.4.0 /usr/local/robovm
 COPY build.sh /build.sh
 RUN chmod 755 /build.sh
 #RUN /build.sh
-COPY robovm.sh /usr/local/robovm/bin/robovm
-RUN chmod 755 /usr/local/robovm/bin/robovm
-CMD /usr/local/robovm/bin/robovm
+CMD /usr/local/robovm/bin/robovm --help
 
 
