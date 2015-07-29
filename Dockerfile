@@ -1,4 +1,4 @@
-FROM sillelien/jessy:master
+FROM debian:jessie
 RUN apt-get update && apt-get install -y build-essential gcc-multilib g++-multilib openjdk-7-jdk wget
 RUN wget -qO- https://get.docker.com/ | sh
 RUN wget "http://download.robovm.org/robovm-1.4.0.tar.gz"
@@ -9,5 +9,6 @@ RUN chmod 755 /build.sh
 #RUN /build.sh
 COPY robovm.sh /usr/local/robovm/bin/robovm
 RUN chmod 755 /usr/local/robovm/bin/robovm
+CMD /usr/local/robovm/bin/robovm
 
 
