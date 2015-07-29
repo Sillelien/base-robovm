@@ -1,4 +1,4 @@
-#!/usr/bin/env ash
+#!/usr/bin/env sh
 
 BASE=$(cd "$(dirname "$0")/.."; pwd -P)
 COMPILER_JAR="$BASE/lib/robovm-dist-compiler.jar"
